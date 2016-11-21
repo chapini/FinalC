@@ -1,3 +1,33 @@
-<h1>
-  {{title}}
-</h1>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>Con100T</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+</head>
+  <nav class="green" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" class="brand-logo" [routerLink]="['/home']">Con100T</a>
+      <ul class="right hide-on-med-and-down"> 
+         <li><a  class="  teal darken-3" *ngIf="auth | async" [routerLink]="['/disp']">Mis Dispositivos</a></li>
+            <li><a  *ngIf="auth | async" [routerLink]="['/benchclima']">Clima</a></li>
+            <li><a  *ngIf="auth | async" [routerLink]="['/benchlava']">Lavadora</a></li>
+            
+            <li><a  *ngIf="auth | async" [routerLink]="['/benchtv']">Television</a></li>
+              <li><a  *ngIf="auth | async" [routerLink]="['/benchrefri']">Refrigerador</a></li>
+           
+            <li><a class=" teal lighten-2" *ngIf="auth | async" [routerLink]="['/disp']">Bienvenido:  {{(user | async)?.auth.displayName}}</a></li>
+             <li><a  *ngIf="auth | async" (click)="logout()">Logout</a></li>
+            <li><a *ngIf="!(auth | async)" [routerLink]="['/home']">You need to login</a></li>
+          </ul>
+           <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+        <li><a [routerLink]="['/home']">home</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+<router-outlet></router-outlet>
+
