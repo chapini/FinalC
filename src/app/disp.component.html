@@ -1,0 +1,56 @@
+ <style>
+   img {
+     max-width:100%;
+     max-height:100%;
+     margin: auto;
+     display: block;
+     }
+ </style>
+ <div class="container" >
+  
+	 
+<div class="row center-align" >
+
+
+
+ <div [ngSwitch]="d1">
+	<lava *ngSwitchCase="'Lavadora'"></lava>
+    <clima *ngSwitchCase="'Clima'"></clima>
+    	<tv *ngSwitchCase="'Television'"></tv>
+        
+</div>
+
+
+ <div [ngSwitch]="d2">
+	<tv *ngSwitchCase="'Television'"></tv>
+    <clima *ngSwitchCase="'Clima'"></clima>
+    	<lava *ngSwitchCase="'Lavadora'"></lava>
+        
+</div>
+
+
+
+
+        </div>
+
+          <div class="row center-align">
+
+ <div [ngSwitch]="d3">
+	<clima *ngSwitchCase="'Clima'"></clima>
+    	<lava *ngSwitchCase="'Lavadora'"></lava>
+        <tv *ngSwitchCase="'Television'"></tv>
+        
+</div>
+
+
+ <div [ngSwitch]="d2">
+	<tv *ngSwitchCase="'Television'"></tv>
+    <clima *ngSwitchCase="'Clima'"></clima>
+    	<lava *ngSwitchCase="'Lavadora'"></lava>
+        
+</div>
+
+
+          </div>
+      </div>
+

@@ -1,0 +1,29 @@
+  <div class="card small horizontal col s12 m6 l6" >
+    	
+
+				    	<div class="card-image" >
+					        <img  src="./png/television.png">
+					     </div>
+					    <div class="card-stacked">
+						    <div class="card-content">
+
+						       
+                                   
+                                  
+                                        <p class="black-text" > {{ (item | async)?.marca}} </p>
+                                        <p class="green-text" > Consumo:  </p><p class="red-text">{{ (item | async)?.consumo }} kWh</p>
+                                         <p class="blue-text">   Tipo: {{ (item | async)?.tipo }} </p>
+                                          <p>  {{ (item| async)?.pulgadas }} " </p>
+                                       
+                                   
+                                 
+                                  
+                                  
+                                    
+						    </div>
+						    <div class="card-action green">
+						        <a class="white-text" [routerLink]="['/benchtv']">Televiones</a>
+						    </div>
+					    </div>
+
+					</div>

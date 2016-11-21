@@ -1,0 +1,30 @@
+<div class="card small horizontal col s12 m6 l6" >
+    	
+
+				    	<div class="card-image" >
+					        <img  src="./png/clima.png">
+					     </div>
+					    <div class="card-stacked">
+						    <div class="card-content">
+
+						       
+                                   
+                                    <ul>
+                                           <p class="black-text" > {{ (item | async)?.marca}} </p>
+                                         <p class="green-text" > Consumo:  </p><p class="red-text">{{ (item | async)?.consumo }} kWh</p>
+                                        
+                                         <p class="blue-text">   BTU: {{ (item | async)?.btu }} </p>
+                                       
+                                        </ul> 
+                                   
+                                 
+                                  
+                                  
+                                    
+						    </div>
+						    <div class="card-action green">
+						        <a class="white-text" [routerLink]="['/benchclima']">Clima</a>
+						    </div>
+					    </div>
+
+					</div>

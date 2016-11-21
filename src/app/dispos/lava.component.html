@@ -1,0 +1,19 @@
+  <div class="card small horizontal col s12 m6 l6" >
+    	
+
+				    	<div class="card-image" >
+					        <img  src="./png/lavadora.png">
+					     </div>
+					    <div class="card-stacked">
+						    <div class="card-content">
+						    <p class="black-text" > {{ (item | async)?.marca}} </p>
+						      
+						        
+                                  <p class="green-text" > Consumo:  </p><p class="red-text">{{ (item | async)?.consumo }} kWh</p>
+                                        <p class="blue-text"> Kilogramos:  {{ (item | async)?.kilohramos }} Kg.</p>
+						    </div>
+						    <div class="card-action center green">
+						        <a class="white-text" [routerLink]="['/benchlava']">Lavadoras</a>
+						    </div>
+					    </div>
+					</div>
